@@ -220,10 +220,6 @@ class PermissionReader implements PermissionReaderInterface
             $this->addPermissionCollectionToResponse($permissionCollectionTransfer, $restResponse);
         }
 
-        if (!$permissionCollectionTransfer) {
-            return $restResponse;
-        }
-
         return $restResponse;
     }
 
@@ -244,11 +240,11 @@ class PermissionReader implements PermissionReaderInterface
         }
 
         foreach ($companyRoleCollectionTransfer->getRoles() as $companyRoleTransfer) {
-            $permissionCollectionTransfer = $companyRoleTransfer->getPermissionCollection();
-
-            if (!$permissionCollectionTransfer) {
+            if (!$companyRoleTransfer->getPermissionCollection()) {
                 continue;
             }
+
+            $permissionCollectionTransfer = $companyRoleTransfer->getPermissionCollection();
 
             $permissionCollectionTransfer->fromArray($permissionCollectionTransfer->toArray(), true);
         }

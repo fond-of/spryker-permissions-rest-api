@@ -7,4 +7,33 @@
         <property name="isSuccessful" type="bool"/>
         <property name="messages" type="Message[]" singular="message"/>
     </transfer>
+
+    <transfer name="Permission">
+        <property name="key" type="string"/>
+        <property name="configuration" type="array"/>
+    </transfer>
+
+    <transfer name="RestPermissionsResponseAttributes">
+        <property name="key" type="string"/>
+    </transfer>
+
+    <transfer name="Customer">
+        <property name="Permissions" type="PermissionCollection" singular="permission"/>
+    </transfer>
+
+    <transfer name="PermissionCollection">
+        <property name="permissions" type="Permission[]" singular="permission" />
+    </transfer>
+
+    <transfer name="CompanyRoleCollection">
+        <property name="roles" type="CompanyRole[]" singular="role" />
+    </transfer>
+
+    <transfer name="CompanyRole">
+        <property name="permissionCollection" type="PermissionCollection"/>
+    </transfer>
+
+    <transfer name="CompanyUser">
+        <property name="companyRoleCollection" type="CompanyRoleCollection"/>
+    </transfer>
 </transfers>

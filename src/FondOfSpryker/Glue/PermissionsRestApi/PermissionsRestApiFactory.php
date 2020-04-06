@@ -35,7 +35,7 @@ class PermissionsRestApiFactory extends AbstractFactory
     /**
      * @return \FondOfSpryker\Glue\PermissionsRestApi\Processor\Permissions\PermissionMapperInterface
      */
-    public function createPermissionMapper(): PermissionMapperInterface
+    protected function createPermissionMapper(): PermissionMapperInterface
     {
         return new PermissionMapper();
     }
@@ -43,7 +43,7 @@ class PermissionsRestApiFactory extends AbstractFactory
     /**
      * @return \FondOfSpryker\Glue\PermissionsRestApi\Processor\Validation\RestApiErrorInterface
      */
-    public function createRestApiError(): RestApiErrorInterface
+    protected function createRestApiError(): RestApiErrorInterface
     {
         return new RestApiError();
     }
@@ -51,7 +51,7 @@ class PermissionsRestApiFactory extends AbstractFactory
     /**
      * @return \FondOfSpryker\Glue\PermissionsRestApi\Dependency\Client\PermissionsRestApiToCustomerB2bClientInterface
      */
-    public function getCustomerB2bClient(): PermissionsRestApiToCustomerB2bClientInterface
+    protected function getCustomerB2bClient(): PermissionsRestApiToCustomerB2bClientInterface
     {
         return $this->getProvidedDependency(PermissionsRestApiDependencyProvider::CLIENT_CUSTOMER_B2B);
     }
@@ -59,7 +59,7 @@ class PermissionsRestApiFactory extends AbstractFactory
     /**
      * @return \FondOfSpryker\Glue\PermissionsRestApi\Dependency\Client\PermissionsRestApiToCompanyUserClientInterface
      */
-    public function getCompanyUserClient(): PermissionsRestApiToCompanyUserClientInterface
+    protected function getCompanyUserClient(): PermissionsRestApiToCompanyUserClientInterface
     {
         return $this->getProvidedDependency(PermissionsRestApiDependencyProvider::CLIENT_COMPANY_USER);
     }
