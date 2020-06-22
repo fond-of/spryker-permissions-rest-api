@@ -25,17 +25,17 @@ class PermissionReader implements PermissionReaderInterface
     protected $restResourceBuilder;
 
     /**
-     * @var \FondOfSpryker\Glue\PermissionsRestApi\Processor\Permissions\PermissionMapper
+     * @var \FondOfSpryker\Glue\PermissionsRestApi\Processor\Permissions\PermissionMapperInterface
      */
     protected $permissionMapper;
 
     /**
-     * @var \Spryker\Client\Customer\CustomerClientInterface
+     * @var \FondOfSpryker\Glue\PermissionsRestApi\Dependency\Client\PermissionsRestApiToCustomerB2bClientInterface
      */
     protected $customerB2bClient;
 
     /**
-     * @var \Spryker\Client\CompanyUser\CompanyUserClientInterface
+     * @var \FondOfSpryker\Glue\PermissionsRestApi\Dependency\Client\PermissionsRestApiToCompanyUserClientInterface
      */
     protected $companyUserClient;
 
@@ -122,8 +122,10 @@ class PermissionReader implements PermissionReaderInterface
 
         $permissionCollectionTransfer = $customerTransfer->getPermissions();
 
-        if ($permissionCollectionTransfer &&
-            $this->containsPermissionCollectionPermissionKey($permissionCollectionTransfer, $key)) {
+        if (
+            $permissionCollectionTransfer &&
+            $this->containsPermissionCollectionPermissionKey($permissionCollectionTransfer, $key)
+        ) {
             return true;
         }
 
