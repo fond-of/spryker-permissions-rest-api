@@ -1,6 +1,5 @@
 <?php
 
-
 namespace FondOfSpryker\Glue\PermissionsRestApi\Plugin;
 
 use FondOfSpryker\Glue\PermissionsRestApi\PermissionsRestApiConfig;
@@ -12,9 +11,9 @@ use Spryker\Glue\Kernel\AbstractPlugin;
 class PermissionsResourceRoutePlugin extends AbstractPlugin implements ResourceRoutePluginInterface
 {
     /**
-     * @api
+     * {@inheritDoc}
      *
-     * {@inheritdoc}
+     * @api
      *
      * @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRouteCollectionInterface $resourceRouteCollection
      *
@@ -30,9 +29,9 @@ class PermissionsResourceRoutePlugin extends AbstractPlugin implements ResourceR
     }
 
     /**
-     * @api
+     * {@inheritDoc}
      *
-     * {@inheritdoc}
+     * @api
      *
      * @return string
      */
@@ -42,9 +41,9 @@ class PermissionsResourceRoutePlugin extends AbstractPlugin implements ResourceR
     }
 
     /**
-     * @api
+     * {@inheritDoc}
      *
-     * {@inheritdoc}
+     * @api
      *
      * @return string
      */
@@ -54,9 +53,9 @@ class PermissionsResourceRoutePlugin extends AbstractPlugin implements ResourceR
     }
 
     /**
-     * @api
+     * {@inheritDoc}
      *
-     * {@inheritdoc}
+     * @api
      *
      * @return string
      */
