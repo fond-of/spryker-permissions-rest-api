@@ -10,7 +10,7 @@
   ],
   "require": {
     "php": ">=7.1",
-    "fond-of-spryker/customer-b2b": "dev-master",
+    "fond-of-spryker/customer-b2b": "dev-spryker_upgrade",
     "spryker/company-user": "^2.5.0",
     "spryker/glue-application": "^1.0.0",
     "spryker/zed-request": "^3.0.0"
